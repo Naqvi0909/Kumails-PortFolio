@@ -1,30 +1,32 @@
-# Kumail — Data Engineering & Software Projects
+# Kumail — Data Engineering Projects
 
-This repository showcases **hands-on projects** focused on **data engineering, ETL pipelines, and software development**.  
-Each project demonstrates real-world workflows, clean structure, and production-oriented thinking.
+This repository contains **selected engineering projects** demonstrating hands-on experience in **data pipelines, SQL-based transformations, and backend data workflows**.
+
+I currently work as a **Data Engineer in the banking sector** with **2.5+ years of experience**, focusing on data integration, transformation, and reliability in production systems.
 
 ---
 
 ## 📁 Projects
 
 ### 🔄 Sales Data Pipeline
-An end-to-end **ETL pipeline** that ingests raw sales data, applies transformations using Python and SQL, and produces analytics-ready outputs.
+An end-to-end **ETL pipeline** designed to simulate real-world sales data processing workflows used in analytics and reporting systems.
 
-**Highlights:**
-- Modular ETL design
-- SQL-based transformations
-- Clear separation of raw, processed, and output data
+**Key Aspects:**
+- Structured ETL design
+- Python- and SQL-driven transformations
+- Clear separation of raw, processed, and output layers
+- Analytics-ready datasets
 
 📂 Folder: `sales-data-pipeline/`
 
 ---
 
 ### 🏥 MedCore HMS
-A **Hospital Management System** designed to manage patients, doctors, and operational workflows.
+A backend-driven **Hospital Management System** focusing on structured data handling and system design.
 
-**Highlights:**
-- Structured backend logic
-- Real-world domain modeling
+**Key Aspects:**
+- Domain-driven data modeling
+- Backend logic and workflows
 - Scalable project structure
 
 📂 Folder: `MedCore-HMS/`
@@ -32,34 +34,34 @@ A **Hospital Management System** designed to manage patients, doctors, and opera
 ---
 
 ### 💰 Finance App
-A finance-focused application handling structured data, calculations, and reporting logic.
+A finance-oriented application handling structured datasets, calculations, and reporting logic.
 
-**Highlights:**
-- Data handling & transformations
-- Clean application logic
-- Practical business use-case
+**Key Aspects:**
+- Data processing logic
+- Business-driven calculations
+- Clean, maintainable structure
 
 📂 Folder: `finance_app/`
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Core Skills & Stack
 
-- **Python**
-- **SQL**
-- **ETL Pipelines**
-- **Data Modeling**
+- **SQL (Oracle / PostgreSQL)**
+- **Python (ETL & data processing)**
+- **Data Pipelines & Integration**
+- **Banking Data Workflows**
 - **Git & Version Control**
 
 ---
 
-## 🎯 Focus Areas
+## 🎯 Professional Focus
 
-- Data Engineering
-- ETL & Data Pipelines
-- Data Transformation & Analysis
-- Backend & System Design
+- Data Engineering & ETL Pipelines  
+- Data Quality & Transformations  
+- Analytics-ready Data Models  
+- Backend & Integration Systems  
 
 ---
 
-📌 *This repository is actively maintained and reflects real-world data engineering practices.*
+📌 *These projects complement my professional experience and reflect production-oriented engineering practices.*
