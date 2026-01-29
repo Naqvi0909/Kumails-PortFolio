@@ -1,0 +1,93 @@
+{% extends "base/layout.html" %}
+
+{% block title %}Dashboard - MedCore HMS{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+    <h2><i class="fas fa-tachometer-alt"></i> Dashboard</h2>
+    <p class="text-muted">Welcome, {{ current_user.full_name }} ({{ current_user.role }})</p>
+    
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <div class="card bg-primary text-white">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-users"></i> Total Patients</h5>
+                    <h2>{{ total_patients }}</h2>
+                    <small>Active: {{ active_patients }} | Critical: {{ critical_patients }}</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-success text-white">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-bed"></i> Rooms</h5>
+                    <h2>{{ total_rooms }}</h2>
+                    <small>Occupied: {{ occupied_rooms }} | Available: {{ available_rooms }}</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-info text-white">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-user-md"></i> Staff</h5>
+                    <h2>{{ total_staff }}</h2>
+                    <small>Medical professionals</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-warning text-white">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-procedures"></i> Critical Cases</h5>
+                    <h2>{{ critical_patients }}</h2>
+                    <small>Requires attention</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5><i class="fas fa-clock"></i> Recent Patients</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>MRN</th>
+                                    <th>Patient Name</th>
+                                    <th>Status</th>
+                                    <th>Admission Date</th>
+                                    <th>Assigned Doctor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for patient in recent_patients %}
+                                <tr>
+                                    <td>{{ patient.medical_record_number }}</td>
+                                    <td>{{ patient.full_name }}</td>
+                                    <td>
+                                        <span class="badge bg-{{ 'success' if patient.status == 'active' else 'warning' if patient.status == 'critical' else 'secondary' }}">
+                                            {{ patient.status }}
+                                        </span>
+                                    </td>
+                                    <td>{{ patient.admission_date.strftime('%Y-%m-%d %H:%M') if patient.admission_date else 'N/A' }}</td>
+                                    <td>{{ patient.assigned_doctor.full_name if patient.assigned_doctor else 'Unassigned' }}</td>
+                                </tr>
+                                {% else %}
+                                <tr>
+                                    <td colspan="5" class="text-center text-muted">No patients found</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
